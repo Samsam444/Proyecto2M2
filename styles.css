@@ -163,18 +163,19 @@ h1{
 }
 
 #sobre-nosotros{
-    position: relative;
     top: 0;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     background-color: #374580;
-    background-image: linear-gradient(rgba(90, 100, 153, 0.190), rgba(55, 69, 128, 0.07));
+    background-image: linear-gradient(rgba(90, 100, 153, 0.190), rgba(55, 69, 128, 0.47));
 }
 
 .h2-cont{
     top: 0;
-    width:900px;
-    padding:100px;
+    margin-left:auto;
+    margin-right:auto;
+    width:700px;
+    padding-top: 130px;
 }
 
 .h2-cont h2{
@@ -183,5 +184,98 @@ h1{
     font-weight: bold;
     background-color: rgba(225, 225, 225);
     border-radius: 18px;
-    padding: 0 50px;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.p-cont2{
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 33px;
+    color: rgba(225, 225, 225);
+    margin-top: 50px;
+}
+
+.p-cont2 p{
+    padding: 20px;
+    border: 1px solid rgba(225, 225, 225);
+    border-radius: 18px;
+    background-image: linear-gradient(rgba(90, 100, 153, 0.3), rgba(90, 100, 153, 0.3));
+}
+
+#p1{
+    margin-right: 30px;
+}
+
+#p2{
+    margin-left: 30px;
+}
+
+.sec1{
+    animation-timeline: view();
+    animation-range: entry 0% cover 70%;
+    animation: transicion 3s ease-in-out;
+}
+
+@keyframes transicion{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#servicios{
+    top: 0;
+    width: 100%;
+    height: 120vh;
+    background-color: #374580;
+    background-image: linear-gradient( rgba(55, 69, 128, 0.47), rgba(225, 225, 225, 0.150) );
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 50px;
+}
+
+details{
+    color: rgba(225, 225, 225);
+}
+details p{
+    margin-top: 20px;
+}
+
+.svg{
+    display: inline;
+    background-color:  rgba(225, 225, 225);
+    border-radius: 100px;
+    color: #374580;
+    padding-top: 15px;
+}
+svg{padding-top: 14px;
+padding-left: 3px;}
+
+
+summary{
+    list-style: none;
+    margin-right: 400px;
+}
+
+summary span{
+    padding: 10px;
+    border: 1px solid rgba(225, 225, 225);
+    border-radius: 18px;
+    font-size: 20px;
+}
+
+summary:-webkit-details-marker{
+    display: none;
 }

@@ -383,6 +383,7 @@ summary:-webkit-details-marker{
 }
 #contact{
     width: 100%;
+    padding-top: 80px;
     background-color: #374580;
     display: flex;
     justify-content: center;
@@ -547,8 +548,6 @@ footer{
     }
     .i-header i {
         visibility: hidden;
-        top: 130px;
-        left: 20px;
     }
     .h1-cont {
         width: 90%;
@@ -593,8 +592,7 @@ footer{
     }
     .p-cont2 p {padding: 25px 15px;}
     .i-header2 i {
-        top: 200px;
-        left: 20px;
+        visibility: hidden;
     }
     #servi{
         display: flex;
@@ -646,7 +644,7 @@ footer{
         width: 100%;
     }
     .c-cont p {font-size: 20px;}
-   .a-cont2 {
+    .a-cont2 {
         width: 250px;
         height: 46px;
     }

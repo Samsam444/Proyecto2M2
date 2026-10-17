@@ -1,25 +1,26 @@
 html{ scroll-behavior: smooth;}
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Aileron', sans-serif;                                                                              
 }
-
+body{
+    width: 100%;
+    height: 100%;
+}
 header{
     position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    padding-bottom: 50px;
     background-color: #374580;
     background-image: linear-gradient(rgba(90, 100, 153, 0.5));
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-
 nav{
     position: fixed;
     top: 0;
@@ -34,7 +35,6 @@ nav{
     align-items: center;
     z-index: 1000;
 }
-
 nav a{
     color: rgba(225, 225, 225);
     text-decoration: none;
@@ -51,10 +51,14 @@ nav a:hover{
 .a-nav{
     margin-right: 100px;
 }
-
 .logo{
-    padding:0 100px;
-    margin-right: 80px;
+    margin-right: 200px;
+}
+.logo1{
+    width: 500px;
+    height: 90px;
+    display: block;
+    object-fit: contain;
 }
 .i-header{
     position: relative;
@@ -75,7 +79,6 @@ nav a:hover{
     align-items: center;
     flex-direction: column;
 }
-
 h1{
     color: rgba(225, 225, 225);
     font-size: 50px;
@@ -85,7 +88,6 @@ h1{
     text-align: center;
     line-height: 2;
 }
-
 #c1{
     color:#374580;
     font-weight: bold;
@@ -93,7 +95,6 @@ h1{
     border-radius: 12px;
     padding: 0 50px;
 }
-
 .a-cont{
     position: relative;
     display: flex;
@@ -108,7 +109,6 @@ h1{
     border-radius: 12px;
     transition: 0.4s;
 }
-
 .a-header{
     position: absolute;
     color: rgba(225, 225, 225);
@@ -120,35 +120,29 @@ h1{
     text-align: center;
     transition: 0.4s;
 }
-
 .divi{
     position:absolute;
     display:inline-flex;
 }
-
 .i1{
     position: absolute;
     color: rgba(225, 225, 225);
     margin-left: 10px;
     transition: 0.4s;
 }
-
 .a-cont:hover{
     background-color: rgba(225, 225, 225);
     border: 2px solid rgba(225, 225, 225);
     transition: 0.4s;
 }
-
 .a-cont:hover .a-header{
     color: #374580;
     transition: 0.4s;
 }
-
 .a-cont:hover .i1{
     color: #374580;
     transition: 0.4s;
 }
-
 .p-cont{
     width: 800px;
     margin-top: 20px;
@@ -163,11 +157,9 @@ h1{
     color: rgba(225, 225, 225);
     animation-timeline: scroll(root);
 }
-
 .p-cont p{
     animation: aparecer 2s ease-in-out;
 }
-
 @keyframes aparecer{
     from{
         opacity: 0;
@@ -176,7 +168,6 @@ h1{
         opacity: 1;
     }
 }
-
 #sobre-nosotros{
     width: 100%;
     background-color: #374580;
@@ -186,14 +177,12 @@ h1{
     background-size:cover;
     padding-bottom: 30px;
 }
-
 .h2-cont{
     margin-left:auto;
     margin-right:auto;
     width:700px;
     padding-top: 130px;
 }
-
 .h2-cont h2{
     color:#374580;
     font-size: 50px;
@@ -203,7 +192,6 @@ h1{
     padding: 20px 10px;
     text-align: center;
 }
-
 .p-cont2{
     width: 1300px;
     margin-left: auto;
@@ -230,7 +218,6 @@ h1{
     animation-range: entry 0% cover 70%;
     animation: transicion 3s ease-in-out;
 }
-
 @keyframes transicion{
     from{
         opacity: 0;
@@ -241,7 +228,6 @@ h1{
         transform: translateY(0);
     }
 }
-
 .sec2{
     animation-timeline: view();
     animation-range: entry 0% cover 70%;
@@ -282,7 +268,7 @@ strong{
     padding-right: 200px;
 }
 .img-container{
-    margin-left: 50px;
+    margin-left: 60px;
     height: 800px;
     display: block;
     -webkit-mask-image: linear linear-gradient(to bottom, black 60%, transparent 100%);
@@ -303,12 +289,11 @@ summary{
     display: inline-flex;
     width: 600px;
     list-style: none;
-    
+    margin-right: 100px;
 }
 summary i{
     margin-top: 10px;
 }
-
 summary span{
     font-size: 30px;
     display: inline-flex;
@@ -329,7 +314,6 @@ summary:-webkit-details-marker{
     color: #374580;
     padding: auto;
 }
-
 .p-det{
     width: 700px;
     margin-top: 16px;
@@ -470,7 +454,9 @@ footer{
 .footer{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-left: 90px;
+}
+#logo2{
+    padding-left: 200px;
 }
 #f1{
     margin-top: 25px;
@@ -492,6 +478,7 @@ footer{
     transition: all .2s;
 }
 .footer2{
+    margin-top: 50px;
     margin-left: 150px;
     font-size: 20px;
 }
@@ -512,6 +499,7 @@ footer{
     transition: all .2s;
 }
 .footer3{
+    margin-top: 50px;
     margin-left: 100px;
     font-size: 20px;
 }
@@ -524,13 +512,18 @@ footer{
 
 @media (max-width: 700px) {
     header {
+        width: 100%;
+        padding-top: 30px;
         height: auto;
-        min-height: 80vh;
-        padding-bottom: 60px;
+        min-height: 50vh;
+        padding-bottom: 30px;
     }
     nav {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
         height: auto;
-        padding: 15px 10px;
+        padding: 10px;
         flex-direction: column;
         gap: 12px;
     }
@@ -538,6 +531,7 @@ footer{
         padding: 0;
         margin-right: 0;
     }
+    .logo1{width: 200px;}
     .a-nav {
         margin-right: 0;
         display: flex;
@@ -551,7 +545,8 @@ footer{
         margin: 0;
     }
     .i-header i {
-        top: 100px;
+        visibility: hidden;
+        top: 130px;
         left: 20px;
     }
     .h1-cont {
@@ -577,12 +572,10 @@ footer{
         margin-right: 15px;
     }
     .p-cont {
-        width: 90%;
+        width: 80%;
         font-size: 16px;
     }
-    #sobre-nosotros {
-        padding-bottom: 40px;
-    }
+    #sobre-nosotros {padding-bottom: 40px;}
     .h2-cont {
         width: 90%;
         padding-top: 60px;
@@ -592,14 +585,12 @@ footer{
         padding: 12px 10px;
     }
     .p-cont2 {
-        width: 90%;
+        width: 80%;
         font-size: 18px;
         margin-top: 30px;
         gap: 20px;
     }
-    .p-cont2 p {
-        padding: 25px 15px;
-    }
+    .p-cont2 p {padding: 25px 15px;}
     .i-header2 i {
         top: 200px;
         left: 20px;
@@ -629,12 +620,8 @@ footer{
         height: auto;
         margin-bottom: 30px;
     }
-    .det-cont {
-        width: 100%;
-    }
-    summary {
-        width: 100%;
-    }
+    .det-cont {width: 100%;}
+    summary { width: 100%;}
     summary span {
         font-size: 18px;
         padding: 8px;
@@ -646,9 +633,7 @@ footer{
         width: 100%;
         margin-left: 0;
     }
-    .p-det p {
-        padding: 15px;
-    }
+    .p-det p {padding: 15px; }
     .sec3 {
         width: 92%;
         margin-top: 40px;
@@ -659,9 +644,7 @@ footer{
     .c-cont {
         width: 100%;
     }
-    .c-cont p {
-        font-size: 20px;
-    }
+    .c-cont p {font-size: 20px;}
    .a-cont2 {
         width: 250px;
         height: 46px;
@@ -670,6 +653,12 @@ footer{
         padding-top: 50px;
         padding-bottom: 50px;
     }
+    #logo2{
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
     .footer {
         grid-template-columns: 1fr;
         margin-left: 0;
@@ -677,19 +666,9 @@ footer{
         text-align: center;
         gap: 35px;
     }
-    .footer2 {
-        margin-left: 0;
-    }
-    .cuentas {
-        padding-top: 15px;
-    }
-    #f3 {
-        justify-content: center;
-    }
-    .footer3 {
-        margin-left: 0;
-    }
-    #f5 {
-        margin-left: 40px;
-    }
+    .footer2 { margin-left: 0;}
+    .cuentas {padding-top: 15px;}
+    #f3 { justify-content: center;}
+    .footer3 {margin-left: 0;}
+    #f5 { margin-left: 40px;}
 }
